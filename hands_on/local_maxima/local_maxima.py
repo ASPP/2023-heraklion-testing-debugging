@@ -14,8 +14,21 @@ def find_maxima(x):
         third_value = x[i+1]
         if first_value < second_value and second_value > third_value:
             local_maxima.append(i)
+        # if i==1 & first_value > second_value:
+        #     local_maxima.append(i)
     return local_maxima
 
 test_list = [1,3,-2,0,2,1]
+print(find_maxima(test_list))
 
+test_list = [4,2,1,3,1,5]
+print(find_maxima(test_list))
+
+test_list = []
+print(find_maxima(test_list))
+
+test_list = [1,2,2,1]
+print(find_maxima(test_list))
+
+test_list = [1,2,2,3,1]
 print(find_maxima(test_list))
