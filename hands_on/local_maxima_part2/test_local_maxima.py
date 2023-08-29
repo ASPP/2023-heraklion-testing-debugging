@@ -1,4 +1,5 @@
 from local_maxima import find_maxima
+import numpy as np
 
 
 def test_find_maxima():
@@ -23,8 +24,18 @@ def test_find_maxima_empty():
 
 
 def test_find_maxima_plateau():
-    raise Exception('not yet implemented')
+    values = [1, 2, 2, 1]
+    expected_v1 = [1]
+    expected_v2 = [2]
+    expected_v3 = [1, 2]
+
+    assert (np.all(find_maxima(values) == expected_v1) 
+            or np.all(find_maxima(values) == expected_v2) 
+            or np.all(find_maxima(values) == expected_v3))
 
 
 def test_find_maxima_not_a_plateau():
-    raise Exception('not yet implemented')
+    values = np.array([1, 2, 2, 3, 1])
+    expected = np.array([3])
+
+    assert np.all(find_maxima(values) == expected)
