@@ -7,4 +7,12 @@ def find_maxima(x):
     Output:
     idx -- list of indices of the local maxima in x
     """
-    return []
+    local_max = []
+    diffs = [f-i for i,f in zip(x[0:-1],x[1:])]
+    for i in range(len(diffs)-1):
+        if diffs[i] > 0 and diffs[i+1] < 0:
+            local_max.append(i+1)
+    return local_max
+
+l = []
+print(find_maxima(l))
