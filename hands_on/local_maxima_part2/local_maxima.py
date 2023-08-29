@@ -1,11 +1,11 @@
 def find_maxima(points):
-    """Find local maxima of x.
+    """Find local maxima of points.
 
     Input arguments:
-    x -- 1D list of real numbers
+    points -- 1D list of real numbers
 
     Output:
-    idx -- list of indices of the local maxima in x
+    indices -- list of indices of the local maxima in points
     """
     indices = []
     
