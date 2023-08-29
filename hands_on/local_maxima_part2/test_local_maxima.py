@@ -23,8 +23,14 @@ def test_find_maxima_empty():
 
 
 def test_find_maxima_plateau():
-    raise Exception('not yet implemented')
+    values = [1, 2, 2, 1]
+    expected = [1]
+    maxima = find_maxima(values)
+    assert maxima == expected
 
 
 def test_find_maxima_not_a_plateau():
-    raise Exception('not yet implemented')
+    values = [1, 2, 2, 3, 1]
+    expected = [3]
+    maxima = find_maxima(values)
+    assert maxima == expected
