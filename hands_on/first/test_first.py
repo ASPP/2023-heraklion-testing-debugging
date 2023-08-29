@@ -17,3 +17,11 @@ def test_times_3_string():
     result = times_3(value)
 
     assert result == expected
+
+def test_times_3_list():
+    value = [1]
+    expected = [1,1,1]
+
+    result = times_3(value)
+
+    assert result == expected
